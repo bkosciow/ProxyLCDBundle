@@ -1,0 +1,30 @@
+{
+  "name" : "Hone/ProxyLCDBundle",
+  "description" : "A Symfony3 handler for Proxy LCD project",
+  "type" : "symfony-bundle",
+  "authors" : [{
+    "name" : "Bartosz Kościów",
+    "email" : "kosci1@gmail.com"
+  }],
+  "keywords" : [
+    "hd44780, Proxy LCD"
+  ],
+  "license" : [
+    "MIT"
+  ],
+  "require" : {
+  },
+  "autoload" : {
+    "psr-0" : {
+      "Hone\\ProxyLCDBundle" : ""
+    }
+  },
+  "target-dir" : "Hone/ProxyLCDBundle",
+  "repositories" : [{
+  }],
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "1.0.0-dev"
+    }
+  }
+}
