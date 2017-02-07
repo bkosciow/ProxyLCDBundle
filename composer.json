@@ -19,7 +19,7 @@
       "Hone\\ProxyLCDBundle" : ""
     }
   },
-  "target-dir" : "Hone/ProxyLCDBundle",
+  "target-dir" : "hone/proxy-lcd-bundle",
   "repositories" : [{
   }],
   "extra" : {
