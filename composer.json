@@ -16,7 +16,7 @@
   },
   "autoload" : {
     "psr-4" : {
-      "Hone\\Bundle\\ProxyLCDBundle" : ""
+      "Hone\\Bundle\\ProxyLCDBundle\\" : ""
     }
   },
 
