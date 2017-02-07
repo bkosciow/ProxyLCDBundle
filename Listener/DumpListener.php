@@ -2,7 +2,7 @@
 
 namespace Hone\Bundle\ProxyLCDBundle\Listener;
 
-use Hone\ProxyLCDBundle\Service\ProxyLCDInterface;
+use Hone\Bundle\ProxyLCDBundle\Service\ProxyLCDInterface;
 use Symfony\Component\VarDumper\Cloner\ClonerInterface;
 use Symfony\Component\VarDumper\Dumper\DataDumperInterface;
 use Symfony\Component\VarDumper\VarDumper;
