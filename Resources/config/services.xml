@@ -6,13 +6,13 @@
 
     <services>
         <service id="hone.proxy_lcd.service.proxy_lcd"
-                 class="Hone\ProxyLCDBundle\Service\ProxyLCD">
+                 class="Hone\Bundle\ProxyLCDBundle\Service\ProxyLCD">
             <argument type="string">%proxy_lcd_ip%</argument>
             <argument type="string">%proxy_lcd_port%</argument>
 
         </service>
         <service id="hone.proxy_lcd.listener.dump_listener"
-                 class="Hone\ProxyLCDBundle\Listener\DumpListener">
+                 class="Hone\Bundle\ProxyLCDBundle\Listener\DumpListener">
             <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
             <argument type="service" id="hone.proxy_lcd.service.proxy_lcd" />
             <argument type="service" id="data_collector.dump" />
