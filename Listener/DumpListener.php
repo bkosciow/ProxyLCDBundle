@@ -1,6 +1,6 @@
 <?php
 
-namespace Hone\ProxyLCDBundle\Listener;
+namespace Hone\Bundle\ProxyLCDBundle\Listener;
 
 use Hone\ProxyLCDBundle\Service\ProxyLCDInterface;
 use Symfony\Component\VarDumper\Cloner\ClonerInterface;

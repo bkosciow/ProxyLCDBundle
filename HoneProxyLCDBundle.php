@@ -1,6 +1,6 @@
 <?php
 
-namespace Hone\ProxyLCDBundle;
+namespace Hone\Bundle\ProxyLCDBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

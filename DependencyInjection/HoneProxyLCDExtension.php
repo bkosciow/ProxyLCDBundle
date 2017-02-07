@@ -1,6 +1,6 @@
 <?php
 
-namespace Hone\ProxyLCDBundle\DependencyInjection;
+namespace Hone\Bundle\ProxyLCDBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
