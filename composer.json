@@ -1,5 +1,5 @@
 {
-  "name" : "Hone/ProxyLCDBundle",
+  "name" : "hone/proxy-lcd-bundle",
   "description" : "A Symfony3 handler for Proxy LCD project",
   "type" : "symfony-bundle",
   "authors" : [{
