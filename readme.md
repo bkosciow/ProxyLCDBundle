@@ -4,6 +4,10 @@ Symfony3 handler for Proxy LCD project.
 Hook to dump() and send content to Proxy LCD.
 Works nicely in docker. 
 
+Send only strings so arrays are imploded to string, object are converted to id and name. 
+
+Read more @ [https://koscis.wordpress.com/tag/proxy-lcd/](https://koscis.wordpress.com/tag/proxy-lcd/)
+
 [NodeHD44780](https://github.com/bkosciow/esp_remote_lcd) - remote lcd
 
 ![display](https://koscis.files.wordpress.com/2017/01/nodemcu_screen.jpg)

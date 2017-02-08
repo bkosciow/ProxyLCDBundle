@@ -2,6 +2,8 @@
 
 namespace Hone\Bundle\ProxyLCDBundle\Service;
 
+use Hone\Bundle\ProxyLCDBundle\Exception\Proxy;
+
 class ProxyLCD implements ProxyLCDInterface
 {
     /**
@@ -16,7 +18,7 @@ class ProxyLCD implements ProxyLCDInterface
 
     /**
      * @param string $ip
-     * @param int $port
+     * @param int    $port
      */
     public function __construct($ip, $port)
     {
@@ -26,6 +28,8 @@ class ProxyLCD implements ProxyLCDInterface
 
     /**
      * @param mixed $content
+     *
+     * @throws Proxy
      */
     public function stream($content)
     {
@@ -39,12 +43,12 @@ class ProxyLCD implements ProxyLCDInterface
             $content = get_class($content);
         }
 
-        $fp = fsockopen($this->ip, $this->port, $errno, $errstr, 30);
-        if (!$fp) {
-            echo "$errstr ($errno)<br />\n";
-        } else {
+        try {
+            $fp = fsockopen($this->ip, $this->port, $errno, $errstr, 10);
             fwrite($fp, $content);
             fclose($fp);
+        } catch (\Exception $exception) {
+            throw Proxy::conectionFailed($this->ip, $this->port, $exception->getMessage());
         }
     }
 }

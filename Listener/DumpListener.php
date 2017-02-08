@@ -31,17 +31,16 @@ class DumpListener
 
     /**
      * @param $enabled
-     * @param ProxyLCDInterface $proxyLCD
+     * @param ProxyLCDInterface   $proxyLCD
      * @param DataDumperInterface $dumper
-     * @param ClonerInterface $cloner
+     * @param ClonerInterface     $cloner
      */
     public function __construct(
         $enabled,
         ProxyLCDInterface $proxyLCD,
         DataDumperInterface $dumper,
         ClonerInterface $cloner
-    )
-    {
+    ) {
         $this->cloner = $cloner;
         $this->dumper = $dumper;
         $this->proxyLCD = $proxyLCD;
@@ -50,7 +49,9 @@ class DumpListener
 
     public function onKernelRequest()
     {
-        if (!$this->enabled) return;
+        if (!$this->enabled) {
+            return;
+        }
 
         $dumper = $this->dumper;
         $cloner = $this->cloner;
