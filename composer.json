@@ -2,6 +2,7 @@
   "name" : "hone/proxy-lcd-bundle",
   "description" : "A Symfony3 handler for Proxy LCD project",
   "type" : "symfony-bundle",
+  "homepage": "https://github.com/bkosciow/ProxyLCDBundle",
   "license": "MIT",
   "authors" : [{
     "name" : "Bartosz Kościów",

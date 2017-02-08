@@ -16,6 +16,18 @@ Read more @ [https://koscis.wordpress.com/tag/proxy-lcd/](https://koscis.wordpre
 
 ![main window](https://koscis.files.wordpress.com/2017/02/screen1.png)
 
+##Installation
+
+    "repositories" : [{
+        "type" : "vcs",
+        "url" : "https://github.com/bkosciow/ProxyLCDBundle"
+    }],
+    
+    
+    "require-dev": {
+        "hone/proxy-lcd-bundle": "dev-master"
+    }
+    
 ##Default configuration
 
     hone_proxy_lcd:
