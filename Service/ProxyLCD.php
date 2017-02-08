@@ -4,12 +4,19 @@ namespace Hone\Bundle\ProxyLCDBundle\Service;
 
 class ProxyLCD implements ProxyLCDInterface
 {
+    /**
+     * @var string
+     */
     private $ip;
+
+    /**
+     * @var int
+     */
     private $port;
 
     /**
      * @param string $ip
-     * @param int    $port
+     * @param int $port
      */
     public function __construct($ip, $port)
     {
@@ -22,6 +29,10 @@ class ProxyLCD implements ProxyLCDInterface
      */
     public function stream($content)
     {
+        if (!$this->ip) {
+            return;
+        }
+
         if (is_array($content)) {
             $content = '['.implode(',', $content).']';
         } elseif (is_object($content)) {

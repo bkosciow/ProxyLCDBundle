@@ -22,8 +22,15 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('proxy_ip')->isRequired()->end()
-                ->integerNode('proxy_port')->isRequired()->end()
+                ->scalarNode('proxy_ip')->defaultValue('localhost')->end()
+                ->integerNode('proxy_port')->defaultValue(5054)->end()
+                ->arrayNode('dump')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->booleanNode('enabled')->defaultFalse()->end()
+                        ->enumNode('mode')->defaultValue('stream')->values(['stream'])->end()
+                    ->end()
+                ->end()
             ->end()
         ;
 

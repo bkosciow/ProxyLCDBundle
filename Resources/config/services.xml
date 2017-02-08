@@ -14,6 +14,7 @@
         <service id="hone.proxy_lcd.listener.dump_listener"
                  class="Hone\Bundle\ProxyLCDBundle\Listener\DumpListener">
             <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
+            <argument type="string">%proxy_lcd.dump.enabled%</argument>
             <argument type="service" id="hone.proxy_lcd.service.proxy_lcd" />
             <argument type="service" id="data_collector.dump" />
             <argument type="service" id="var_dumper.cloner" />

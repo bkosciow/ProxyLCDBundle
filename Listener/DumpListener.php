@@ -25,19 +25,33 @@ class DumpListener
     private $proxyLCD;
 
     /**
-     * @param ProxyLCDInterface   $proxyLCD
-     * @param DataDumperInterface $dumper
-     * @param ClonerInterface     $cloner
+     * @var bool
      */
-    public function __construct(ProxyLCDInterface $proxyLCD, DataDumperInterface $dumper, ClonerInterface $cloner)
+    private $enabled;
+
+    /**
+     * @param $enabled
+     * @param ProxyLCDInterface $proxyLCD
+     * @param DataDumperInterface $dumper
+     * @param ClonerInterface $cloner
+     */
+    public function __construct(
+        $enabled,
+        ProxyLCDInterface $proxyLCD,
+        DataDumperInterface $dumper,
+        ClonerInterface $cloner
+    )
     {
         $this->cloner = $cloner;
         $this->dumper = $dumper;
         $this->proxyLCD = $proxyLCD;
+        $this->enabled = $enabled;
     }
 
     public function onKernelRequest()
     {
+        if (!$this->enabled) return;
+
         $dumper = $this->dumper;
         $cloner = $this->cloner;
         $proxyLCD = $this->proxyLCD;

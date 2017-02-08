@@ -24,6 +24,9 @@ class HoneProxyLCDExtension extends Extension
 
         $container->setParameter('proxy_lcd_ip', $config['proxy_ip']);
         $container->setParameter('proxy_lcd_port', $config['proxy_port']);
+        $container->setParameter('proxy_lcd.dump.enabled', $config['dump']['enabled']);
+        $container->setParameter('proxy_lcd.dump.mode', $config['dump']['mode']);
+
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
     }
