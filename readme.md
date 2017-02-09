@@ -18,19 +18,13 @@ Read more @ [https://koscis.wordpress.com/tag/proxy-lcd/](https://koscis.wordpre
 
 ##Installation
 
-    "repositories" : [{
-        "type" : "vcs",
-        "url" : "https://github.com/bkosciow/ProxyLCDBundle"
-    }],
-    
-    
     "require-dev": {
-        "hone/proxy-lcd-bundle": "dev-master"
+        "kosci/proxy-lcd-bundle": "dev-master"
     }
     
 ##Default configuration
 
-    hone_proxy_lcd:
+    kosci_proxy_lcd:
       proxy_ip: localhost
       proxy_port: 5054
       dump:
@@ -42,7 +36,7 @@ For docker env set host IP.
 
 Minimal configuration:
 
-    hone_proxy_lcd:
+    kosci_proxy_lcd:
       proxy_ip: 192.168.1.102
       dump:
         enabled: true
