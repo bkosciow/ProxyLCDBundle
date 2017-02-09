@@ -1,6 +1,6 @@
 <?php
 
-namespace Hone\Bundle\ProxyLCDBundle\DependencyInjection;
+namespace Kosci\Bundle\ProxyLCDBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * @see http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class HoneProxyLCDExtension extends Extension
+class KosciProxyLCDExtension extends Extension
 {
     /**
      * {@inheritdoc}

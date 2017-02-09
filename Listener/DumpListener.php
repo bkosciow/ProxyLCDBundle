@@ -1,8 +1,8 @@
 <?php
 
-namespace Hone\Bundle\ProxyLCDBundle\Listener;
+namespace Kosci\Bundle\ProxyLCDBundle\Listener;
 
-use Hone\Bundle\ProxyLCDBundle\Service\ProxyLCDInterface;
+use Kosci\Bundle\ProxyLCDBundle\Service\ProxyLCDInterface;
 use Symfony\Component\VarDumper\Cloner\ClonerInterface;
 use Symfony\Component\VarDumper\Dumper\DataDumperInterface;
 use Symfony\Component\VarDumper\VarDumper;

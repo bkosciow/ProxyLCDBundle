@@ -1,6 +1,6 @@
 <?php
 
-namespace Hone\Bundle\ProxyLCDBundle\Service;
+namespace Kosci\Bundle\ProxyLCDBundle\Service;
 
 interface ProxyLCDInterface
 {

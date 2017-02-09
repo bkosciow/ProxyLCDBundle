@@ -1,5 +1,5 @@
 {
-  "name" : "hone/proxy-lcd-bundle",
+  "name" : "kosci/proxy-lcd-bundle",
   "description" : "A Symfony3 handler for Proxy LCD project",
   "type" : "symfony-bundle",
   "homepage": "https://github.com/bkosciow/ProxyLCDBundle",

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hone\Bundle\ProxyLCDBundle\DependencyInjection;
+namespace Kosci\Bundle\ProxyLCDBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('hone_proxy_lcd');
+        $rootNode = $treeBuilder->root('kosci_proxy_lcd');
 
         $rootNode
             ->children()

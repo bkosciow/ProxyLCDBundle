@@ -1,6 +1,6 @@
 <?php
 
-namespace Hone\Bundle\ProxyLCDBundle\Exception;
+namespace Kosci\Bundle\ProxyLCDBundle\Exception;
 
 class Proxy extends \Exception
 {

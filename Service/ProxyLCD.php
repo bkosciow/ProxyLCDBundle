@@ -1,8 +1,8 @@
 <?php
 
-namespace Hone\Bundle\ProxyLCDBundle\Service;
+namespace Kosci\Bundle\ProxyLCDBundle\Service;
 
-use Hone\Bundle\ProxyLCDBundle\Exception\Proxy;
+use Kosci\Bundle\ProxyLCDBundle\Exception\Proxy;
 
 class ProxyLCD implements ProxyLCDInterface
 {
