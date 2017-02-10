@@ -8,6 +8,10 @@ Displays only strings so arrays(one- or multi-dimensional) are transformed to st
 
 Read more @ [https://koscis.wordpress.com/tag/proxy-lcd/](https://koscis.wordpress.com/tag/proxy-lcd/)
 
+![screen](Resources/doc/symfony_proxy_lcd.jpg)
+
+Parts of this project:
+
 [NodeHD44780](https://github.com/bkosciow/esp_remote_lcd) - remote lcd
 
 ![display](https://koscis.files.wordpress.com/2017/01/nodemcu_screen.jpg)
