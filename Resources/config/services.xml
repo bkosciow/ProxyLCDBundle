@@ -7,6 +7,7 @@
     <services>
         <service id="kosci.proxy_lcd.service.proxy_lcd"
                  class="Kosci\Bundle\ProxyLCDBundle\Service\ProxyLCD">
+            <argument type="service" id="kosci.proxy_lcd.service.transformer"/>
             <argument type="string">%proxy_lcd_ip%</argument>
             <argument type="string">%proxy_lcd_port%</argument>
 
@@ -18,6 +19,10 @@
             <argument type="service" id="kosci.proxy_lcd.service.proxy_lcd" />
             <argument type="service" id="data_collector.dump" />
             <argument type="service" id="var_dumper.cloner" />
+        </service>
+        <service id="kosci.proxy_lcd.service.transformer"
+                class="Kosci\Bundle\ProxyLCDBundle\Service\Transformer">
+
         </service>
     </services>
 </container>

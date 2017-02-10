@@ -1,10 +1,10 @@
 #Proxy LCD Bundle
 
 Symfony3 handler for Proxy LCD project. 
-Hook to dump() and send content to Proxy LCD.
+Hooks to dump() and send content to Proxy LCD.
 Works nicely in docker. 
 
-Send only strings so arrays are imploded to string, object are converted to id and name. 
+Displays only strings so arrays(one- or multi-dimensional) are transformed to string, object are transformed to id and name. 
 
 Read more @ [https://koscis.wordpress.com/tag/proxy-lcd/](https://koscis.wordpress.com/tag/proxy-lcd/)
 
@@ -40,3 +40,26 @@ Minimal configuration:
       proxy_ip: 192.168.1.102
       dump:
         enabled: true
+        
+##Sample outpt
+        
+    ['one', 'two', 'eleven'] => [one,two,eleven]
+       
+    [
+       'one' => 'zombie',
+       'two' => 'zombies',
+       'eleven' => 'abnominations'
+    ] => [one:zombie,two:zombies,eleven:abnominations]
+    
+    [
+        'one' => [
+            'one', 'two'
+        ],
+        'two' => [
+            'zombies' => 'no',
+            'humans' => 'yes',
+        ],
+        'eleven' => 'abnominations'
+    ] => [one:[one,two],two:[zombies:no,humans:yes],eleven:abnominations]
+    
+    $input = new ItemWithName(12) => {ItemWithName:12:name}

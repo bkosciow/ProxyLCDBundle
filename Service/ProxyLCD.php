@@ -17,13 +17,20 @@ class ProxyLCD implements ProxyLCDInterface
     private $port;
 
     /**
-     * @param string $ip
-     * @param int    $port
+     * @var Transformer
      */
-    public function __construct($ip, $port)
+    private $transformer;
+
+    /**
+     * @param Transformer $transformer
+     * @param string      $ip
+     * @param int         $port
+     */
+    public function __construct(Transformer $transformer, $ip, $port)
     {
         $this->ip = $ip;
         $this->port = $port;
+        $this->transformer = $transformer;
     }
 
     /**
@@ -37,12 +44,7 @@ class ProxyLCD implements ProxyLCDInterface
             return;
         }
 
-        if (is_array($content)) {
-            $content = '['.implode(',', $content).']';
-        } elseif (is_object($content)) {
-            $content = get_class($content);
-        }
-
+        $content = $this->transformer->transform($content);
         try {
             $fp = fsockopen($this->ip, $this->port, $errno, $errstr, 10);
             fwrite($fp, $content);
