@@ -24,18 +24,23 @@ Parts of this project:
 
     "require-dev": {
         "kosci/proxy-lcd-bundle": "dev-master"
-    }
+    }    
     
+AppKenel:
+    
+    new Kosci\Bundle\ProxyLCDBundle\KosciProxyLCDBundle(),
+        
 ##Default configuration
 
     kosci_proxy_lcd:
       proxy_ip: localhost
       proxy_port: 5054
+      clear_on_request: false
       dump:
         enabled: false
         mode: stream
       
-Without IP bundle is disabled. Only mode stream available for now.
+Without IP bundle is disabled. Only **stream** mode available for now.
 For docker env set host IP.
 
 Minimal configuration:
@@ -44,6 +49,10 @@ Minimal configuration:
       proxy_ip: 192.168.1.102
       dump:
         enabled: true
+      
+When *clear_on_request: false* content is appended to display. 
+With *true* on kernel.request display is cleared and cursor set to (0,0).
+
         
 ##Sample outpt
         
