@@ -24,24 +24,30 @@ Parts of this project:
 
     "require-dev": {
         "kosci/proxy-lcd-bundle": "dev-master"
-    }    
+    }
     
-AppKenel:
+AppKernel:
     
     new Kosci\Bundle\ProxyLCDBundle\KosciProxyLCDBundle(),
-        
+    
+    
 ##Default configuration
 
     kosci_proxy_lcd:
       proxy_ip: localhost
       proxy_port: 5054
-      clear_on_request: false
+      clear_on_request: true
+      request_length: 10
       dump:
         enabled: false
         mode: stream
       
-Without IP bundle is disabled. Only **stream** mode available for now.
+Without setting an IP bundle is disabled. Only mode stream available for now.
 For docker env set host IP.
+
+The **clear_on_request** sets if LCD is cleared on request. 
+To prevent clearing on multiple short requests we can set **request_length**. 
+This sets a delay (in seconds) between request before it is considered a new request. 
 
 Minimal configuration:
 
@@ -49,12 +55,8 @@ Minimal configuration:
       proxy_ip: 192.168.1.102
       dump:
         enabled: true
-      
-When *clear_on_request: false* content is appended to display. 
-With *true* on kernel.request display is cleared and cursor set to (0,0).
-
         
-##Sample outpt
+##Sample output
         
     ['one', 'two', 'eleven'] => [one,two,eleven]
        

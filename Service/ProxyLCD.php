@@ -45,6 +45,38 @@ class ProxyLCD implements ProxyLCDInterface
         }
 
         $content = $this->transformer->transform($content);
+        $this->sendPacket($content);
+    }
+
+    public function clearDisplays()
+    {
+        if (!$this->ip) {
+            return;
+        }
+
+        $this->sendCommand('clear');
+    }
+
+    /**
+     * @param $command
+     */
+    private function sendCommand($command)
+    {
+        $packet = [
+            'command' => $command,
+            'protocol' => 'proxylcd'
+        ];
+        $this->sendPacket(
+            $content = json_encode($packet)
+        );
+    }
+
+    /**
+     * @param $content
+     * @throws Proxy
+     */
+    private function sendPacket($content)
+    {
         try {
             $fp = fsockopen($this->ip, $this->port, $errno, $errstr, 10);
             fwrite($fp, $content);

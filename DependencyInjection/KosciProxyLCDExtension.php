@@ -26,6 +26,8 @@ class KosciProxyLCDExtension extends Extension
         $container->setParameter('proxy_lcd_port', $config['proxy_port']);
         $container->setParameter('proxy_lcd.dump.enabled', $config['dump']['enabled']);
         $container->setParameter('proxy_lcd.dump.mode', $config['dump']['mode']);
+        $container->setParameter('proxy_lcd.clear_on_request', $config['clear_on_request']);
+        $container->setParameter('proxy_lcd.request_length', $config['request_length']);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');

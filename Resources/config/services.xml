@@ -24,5 +24,14 @@
                 class="Kosci\Bundle\ProxyLCDBundle\Service\Transformer">
 
         </service>
+        <service id="kosci.proxy_lcd.listener.clear_listener"
+                 class="Kosci\Bundle\ProxyLCDBundle\Listener\ClearListener">
+            <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
+            <argument type="string">%proxy_lcd.dump.enabled%</argument>
+            <argument type="string">%proxy_lcd.clear_on_request%</argument>
+            <argument type="string">%proxy_lcd.request_length%</argument>
+            <argument type="service" id="kosci.proxy_lcd.service.proxy_lcd" />
+        </service>
+
     </services>
 </container>
