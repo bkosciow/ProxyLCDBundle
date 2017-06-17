@@ -24,6 +24,8 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('proxy_ip')->defaultValue('localhost')->end()
                 ->integerNode('proxy_port')->defaultValue(5054)->end()
+                ->booleanNode('clear_on_request')->defaultFalse()->end()
+                ->integerNode('request_length')->defaultValue(10)->end()
                 ->arrayNode('dump')
                     ->addDefaultsIfNotSet()
                     ->children()
